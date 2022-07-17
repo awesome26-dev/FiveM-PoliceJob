@@ -1,20 +1,20 @@
-fx_version 'adamant'
-game 'gta5'
-description 'Virusexe | PoliceJob'
-version '1.0.0'
+fx_version "adamant"
+game "gta5"
+description "Virusexe | PoliceJob"
+version "1.0.0"
 
 server_scripts {
-	'@mysql-async/lib/MySQL.lua',
-	'@es_extended/locale.lua',
-	'server/server.lua',
-	'locales/de.lua',
-	'config.lua'
+    "@mysql-async/lib/MySQL.lua",
+    "@es_extended/locale.lua",
+    "server/server.lua",
+    "locales/de.lua",
+    "config.lua"
 }
 
 client_scripts {
-	'@es_extended/locale.lua',
-	'locales/de.lua',
-	'client/client.lua',
-	'client/markers.lua',
-	'config.lua'
+    "@es_extended/locale.lua",
+    "locales/de.lua",
+    "client/client.lua",
+    "client/markers.lua",
+    "config.lua"
 }
