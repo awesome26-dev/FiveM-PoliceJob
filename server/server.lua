@@ -18,10 +18,12 @@ AddEventHandler(
 
         if job == "offduty-police" then
             print("[Debug] Du bist nun im Dienst")
+            sendNotification(source, "green", "Anmeldung", "Du bist in Dienst gegangen.")
 
             xPlayer.setJob("police", grade)
         elseif job == "police" then
             print("[Debug] Du bist aus den Dienst gegangen")
+            sendNotification(source, "red", "Abmeldung", "Du bist aus den Dienst gegangen.")
 
             xPlayer.setJob("offduty-police", grade)
         end
@@ -46,3 +48,8 @@ AddEventHandler(
         end
     end
 )
+
+--notification
+function sendNotification(source, color, title, message)
+    TriggerClientEvent("notifications", source, color, title, message)
+end
